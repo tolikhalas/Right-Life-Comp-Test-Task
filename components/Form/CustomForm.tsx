@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import FormInput from "./FormInput";
 import { useTranslations } from "next-intl";
 
@@ -6,6 +6,7 @@ export default function CustomForm({
   form,
   handleChangeText,
   handleSubmit,
+  setPhone,
 }: {
   form: {
     inputs: {
@@ -18,6 +19,7 @@ export default function CustomForm({
   };
   handleChangeText: (name: string, value: string) => void;
   handleSubmit: (event: React.FormEvent) => void;
+  setPhone: (value?: string | undefined) => void;
 }) {
   const t = useTranslations("Form");
 
@@ -33,6 +35,7 @@ export default function CustomForm({
           placeholder={input.placeholder}
           key={index}
           handleChangeText={handleChangeText}
+          setPhone={setPhone}
         />
       ))}
       <input
