@@ -9,6 +9,7 @@ import { getMessages } from "next-intl/server";
 import CustomHeader from "@/components/Global/CustomHeader";
 import CustomFooter from "@/components/Global/CustomFooter";
 import DelayedPopup from "@/components/Global/DelayedPopup";
+import Prevent from "@/components/Global/Prevent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <div className="sticky top-0 z-[999] w-full items-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 font-mono text-sm backdrop-blur-2xl">
+            <Prevent />
             <div className="flex w-full justify-center  pb-6 pt-8  dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
               <CustomHeader />
             </div>

@@ -31,3 +31,38 @@ body {
     text-wrap: balance;
   }
 }
+
+.out-of-view {
+  opacity: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prevent.out-of-view {
+  transform: translateX(100%);
+}
+
+.slide-left {
+  animation: slide infinite 10s linear;
+  transition: all 10s linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  51% {
+    transform: translateX(100%);
+  }
+  75% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
