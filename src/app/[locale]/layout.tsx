@@ -32,8 +32,8 @@ export default async function RootLayout({
         className={`${inter.className} min-h-screen flex-row justify-between`}
       >
         <NextIntlClientProvider messages={messages}>
-          <div className="sticky top-0 z-10 w-full items-center font-mono text-sm ">
-            <div className="flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
+          <div className="sticky top-0 z-[999] w-full items-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 font-mono text-sm backdrop-blur-2xl">
+            <div className="flex w-full justify-center  pb-6 pt-8  dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
               <CustomHeader />
             </div>
           </div>
