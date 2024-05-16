@@ -6,11 +6,13 @@ import CustomForm from "./CustomForm";
 import { useTranslations } from "next-intl";
 
 export default function Feedback() {
-  const t = useTranslations("form");
+  const t = useTranslations("Form");
 
+  const [phone, setPhone] = useState("");
   const [form, setForm] = useState({
     email: "",
     name: "",
+    phone: phone,
     inputs: [
       {
         name: "email",
@@ -25,6 +27,13 @@ export default function Feedback() {
         value: "",
         label: t("name"),
         placeholder: "John Doe",
+      },
+      {
+        name: "phone",
+        inputType: "phone",
+        value: phone,
+        label: t("phone"),
+        placeholder: "+123-567-7890",
       },
     ],
   });
@@ -58,6 +67,7 @@ export default function Feedback() {
             form={form}
             handleChangeText={handleChangeText}
             handleSubmit={handleSubmit}
+            setPhone={setPhone as (value?: string | undefined) => void}
           />
         </div>
       </div>

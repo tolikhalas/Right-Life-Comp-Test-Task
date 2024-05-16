@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <div className="my-8 flex w-full place-items-center ">
-        <Hero />
+        <Hero />    
       </div>
 
       <div

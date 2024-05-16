@@ -19,7 +19,7 @@ export default function CustomFooter() {
           />
         </div>
         {/* Navigation Links */}
-        <div className="mb-4 md:mb-0">
+        <div className="mx-2 mb-8 md:mb-0">
           <div>
             <Link href="/privacy-policy">{t("privacy")}</Link>
           </div>
@@ -34,7 +34,8 @@ export default function CustomFooter() {
         {/* All Rights Reserved */}
         <div className="text-center md:text-left">
           <p>
-            &copy; {new Date().getFullYear()} Switzerland Consulting. {t("all_rights")}
+            &copy; {new Date().getFullYear()} Switzerland Consulting.{" "}
+            {t("all_rights")}
           </p>
         </div>
       </div>

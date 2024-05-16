@@ -4,7 +4,9 @@
     "contacts": "Contacts",
     "faq": "FAQ",
     "about_us": "About us",
-    "search": "Search"
+    "search": "Search",
+    "english": "english",
+    "german": "german"
   },
   "Hero": {
     "header": "Be a",
@@ -30,6 +32,7 @@
     "header": "Let us hear you",
     "email": "Email",
     "name": "Your name",
+    "phone": "Phone",
     "submit": "Submit"
   },
   "Map": {

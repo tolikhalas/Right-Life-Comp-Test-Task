@@ -2,17 +2,29 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslations } from "next-intl";
+import { useParams, useRouter, usePathname } from "next/navigation";
 
 export default function CustomHeader() {
   const t = useTranslations("Navbar");
+
+  const pathname = usePathname();
+  const router = useRouter();
+  const params = useParams();
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = event.target.value;
+    if (newLocale) {
+      router.replace(`/${newLocale}/${pathname.slice(3)}`);
+    }
   };
 
   return (
@@ -88,6 +100,17 @@ export default function CustomHeader() {
           </Link>
         </nav>
       )}
+
+      <select
+        className="rounded-lg px-4 py-2"
+        name="lang"
+        id="lang"
+        onChange={handleLanguageChange}
+        defaultValue="en"
+      >
+        <option value="en">{t("english")}</option>
+        <option value="de">{t("german")}</option>
+      </select>
     </header>
   );
 }
