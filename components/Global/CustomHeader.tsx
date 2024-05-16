@@ -23,6 +23,7 @@ export default function CustomHeader() {
           height={64}
           src="/logo.svg"
           alt="Switzerland Consulting Logo"
+          className="h-16 w-16"
         />
       </Link>
       <nav className="hidden gap-2 md:flex">

@@ -42,7 +42,7 @@ export default function Feedback() {
 
   return (
     <div className="justify-cente roundedr flex items-center md:p-20">
-      <div className="mx-auto rounded-xl bg-gray-100 md:flex md:p-20">
+      <div className="mx-auto rounded-xl bg-gray-100 md:flex md:p-10 lg:p-20">
         <Image
           className="flex-1"
           src="https://www.shutterstock.com/shutterstock/photos/302201210/display_1500/stock-photo-business-handshake-in-lofty-office-with-city-view-a-deal-is-struck-302201210.jpg"
