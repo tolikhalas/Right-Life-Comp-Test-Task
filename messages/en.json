@@ -1,0 +1,50 @@
+{
+  "Navbar": {
+    "blog": "Blog",
+    "contacts": "Contacts",
+    "faq": "FAQ",
+    "about_us": "About us",
+    "search": "Search"
+  },
+  "Hero": {
+    "header": "Be a",
+    "header_bold": "Hero",
+    "info": "Work with",
+    "info_bold": "Switzerland Consulting"
+  },
+  "Advantages": {
+    "firstCard": {
+      "header": "25% Discount",
+      "info": "If you Sign Up Now"
+    },
+    "secondCard": {
+      "header": "95% of our Clients",
+      "info": "Come back to us"
+    },
+    "thirdCard": {
+      "header": "Big Tech choose us",
+      "info": "Google & Microsoft are our clients"
+    }
+  },
+  "Form": {
+    "header": "Let us hear you",
+    "email": "Email",
+    "name": "Your name",
+    "submit": "Submit"
+  },
+  "Map": {
+    "header": "How to find us"
+  },
+  "Footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "phone": "Phone",
+    "all_rights": "All rights reserved"
+  },
+  "Popup": {
+    "welcome": "Welcome to Our Site",
+    "info": "We use cookies",
+    "accept_all": "Accept all cookies",
+    "only_necessary": "Only necessary ones"
+  }
+}

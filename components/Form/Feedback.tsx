@@ -3,8 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import CustomForm from "./CustomForm";
+import { useTranslations } from "next-intl";
 
 export default function Feedback() {
+  const t = useTranslations("form");
+
   const [form, setForm] = useState({
     email: "",
     name: "",
@@ -13,14 +16,14 @@ export default function Feedback() {
         name: "email",
         inputType: "email",
         value: "",
-        label: "Email",
+        label: t("email"),
         placeholder: "johndoe@mail.com",
       },
       {
         name: "name",
         inputType: "text",
         value: "",
-        label: "Your name",
+        label: t("name"),
         placeholder: "John Doe",
       },
     ],

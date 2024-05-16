@@ -4,8 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTranslations } from "next-intl";
 
 export default function CustomHeader() {
+  const t = useTranslations("Navbar");
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,31 +34,31 @@ export default function CustomHeader() {
           className="rounded-lg px-4 py-2 font-semibold hover:bg-gray-300"
           href="#blog"
         >
-          Blog
+          {t("blog")}
         </Link>
         <Link
           className="rounded-lg px-4 py-2 font-semibold hover:bg-gray-300"
           href="#contacts"
         >
-          Contacts
+          {t("contacts")}
         </Link>
         <Link
           className="rounded-lg px-4 py-2 font-semibold hover:bg-gray-300"
           href="#faq"
         >
-          FAQ
+          {t("faq")}
         </Link>
         <Link
           className="rounded-lg px-4 py-2 font-semibold hover:bg-gray-300"
           href="#about-us"
         >
-          About us
+          {t("about_us")}
         </Link>
         <Link
           className="rounded-lg px-4 py-2 font-semibold hover:bg-gray-300"
           href="#search"
         >
-          Search
+          {t("search")}
         </Link>
       </nav>
       <div className="md:hidden">
@@ -69,19 +72,19 @@ export default function CustomHeader() {
           onClick={toggleMenu}
         >
           <Link href="#blog" onClick={toggleMenu}>
-            Blog
+            {t("blog")}
           </Link>
           <Link href="#contacts" onClick={toggleMenu}>
-            Contacts
+            {t("contacts")}
           </Link>
           <Link href="#faq" onClick={toggleMenu}>
-            FAQ
+            {t("faq")}
           </Link>
           <Link href="#about-us" onClick={toggleMenu}>
-            About us
+            {t("about_us")}
           </Link>
           <Link href="#search" onClick={toggleMenu}>
-            Search
+            {t("search")}
           </Link>
         </nav>
       )}

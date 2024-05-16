@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function CustomFooter() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-gray-800 py-8 text-white">
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
@@ -18,21 +21,20 @@ export default function CustomFooter() {
         {/* Navigation Links */}
         <div className="mb-4 md:mb-0">
           <div>
-            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/privacy-policy">{t("privacy")}</Link>
           </div>
           <div>
-            <Link href="/terms-of-use">Terms of Use</Link>
+            <Link href="/terms-of-use">{t("terms")}</Link>
           </div>
         </div>
         {/* Contact Information */}
         <div className="mb-4 md:mb-0">
-          <p>Phone: (123) 456-7890</p>
+          <p>{t("phone")}: (123) 456-7890</p>
         </div>
         {/* All Rights Reserved */}
         <div className="text-center md:text-left">
           <p>
-            &copy; {new Date().getFullYear()} Switzerland Consulting. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Switzerland Consulting. {t("all_rights")}
           </p>
         </div>
       </div>

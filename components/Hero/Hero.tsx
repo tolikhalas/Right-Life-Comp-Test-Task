@@ -2,8 +2,11 @@
 
 import React from "react";
 import Carousel from "./Carousel";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   const images = [
     {
       src: "https://www.shutterstock.com/shutterstock/photos/2179380689/display_1500/stock-photo-happy-young-asian-saleswoman-looking-at-camera-welcoming-client-smiling-woman-executive-manager-2179380689.jpg",
@@ -26,11 +29,11 @@ export default function Hero() {
       </div>
       <div className="absolute mx-20 flex-row justify-center text-xl text-white md:text-3xl lg:mx-0">
         <h2>
-          Be a <span className="font-semibold">Hero</span>
+          {t("header")}{" "}
+          <span className="font-semibold">{t("header_bold")}</span>
         </h2>
         <p>
-          Work with{" "}
-          <span className="font-semibold">Switzerland Consulting</span>
+          {t("info")} <span className="font-semibold">{t("info_bold")}</span>
         </p>
       </div>
     </article>
