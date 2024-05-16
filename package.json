@@ -17,7 +17,8 @@
     "@react-google-maps/api": "^2.19.3",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
     "@types/google.maps": "^3.55.9",
