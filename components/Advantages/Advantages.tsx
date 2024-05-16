@@ -1,7 +1,10 @@
 import React from "react";
 import AdvantageCards from "./AdvantageCards";
+import { useTranslations } from "next-intl";
 
 export default function Advantages() {
+  const t = useTranslations("Advantages");
+
   const cards = [
     {
       image: {
@@ -9,8 +12,8 @@ export default function Advantages() {
         alt: "Advatage 1 Image",
       },
       text: {
-        header: "25% Discount",
-        info: "If You Sign Up Now",
+        header: t("firstCard.header"),
+        info: t("firstCard.info"),
       },
     },
     {
@@ -19,8 +22,8 @@ export default function Advantages() {
         alt: "Advatage 2 Image",
       },
       text: {
-        header: "95% of our Clients",
-        info: "Come back to us",
+        header: t("secondCard.header"),
+        info: t("secondCard.info"),
       },
       reversed: true,
     },
@@ -30,8 +33,8 @@ export default function Advantages() {
         alt: "Advatage 3 Image",
       },
       text: {
-        header: "Big Tech choose us",
-        info: "Google & Microsoft are our clients",
+        header: t("thirdCard.header"),
+        info: t("thirdCard.info"),
       },
     },
   ];

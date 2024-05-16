@@ -1,9 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
 
 export default function DelayedPopup() {
+  const t = useTranslations("Popup");
+
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -37,22 +40,20 @@ export default function DelayedPopup() {
           >
             &times;
           </button>
-          <div className="mb-4 p-5 text-lg font-semibold">
-            Welcome to Our Site
-          </div>
+          <div className="mb-4 p-5 text-lg font-semibold">{t("welcome")}</div>
           <div className="grid gap-2 text-gray-700">
-            <p>We use cookies</p>
+            <p>{t("info")}</p>
             <button
               className="rounded-lg bg-blue-600 px-4 py-2 text-white"
               onClick={() => setOpen(false)}
             >
-              Accept all cookies
+              {t("accept_all")}
             </button>
             <button
               className="rounded-lg bg-gray-300 px-4 py-2"
               onClick={() => setOpen(false)}
             >
-              Only necesssary ones
+              {t("only_necessary")}
             </button>
           </div>
         </div>

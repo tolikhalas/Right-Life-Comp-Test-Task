@@ -1,5 +1,6 @@
 import React from "react";
 import FormInput from "./FormInput";
+import { useTranslations } from "next-intl";
 
 export default function CustomForm({
   form,
@@ -18,9 +19,11 @@ export default function CustomForm({
   handleChangeText: (name: string, value: string) => void;
   handleSubmit: (event: React.FormEvent) => void;
 }) {
+  const t = useTranslations("Form");
+
   return (
     <form className="grid gap-4 bg-gray-200 p-12" onSubmit={handleSubmit}>
-      <h2 className="text-xl font-semibold">Let us hear you</h2>
+      <h2 className="text-xl font-semibold">{t("header")}</h2>
       {form.inputs.map((input, index) => (
         <FormInput
           name={input.name}
@@ -34,7 +37,7 @@ export default function CustomForm({
       ))}
       <input
         type="submit"
-        value="Submit"
+        value={t("submit")}
         className="w-full rounded-xl bg-gray-500 py-2 font-semibold text-white hover:cursor-pointer"
       />
     </form>

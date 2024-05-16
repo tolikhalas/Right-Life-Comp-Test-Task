@@ -1,3 +1,7 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -5,10 +9,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "www.shutterstock.com",
-        port: ''
+        port: "",
       },
     ],
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

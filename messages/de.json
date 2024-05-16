@@ -1,0 +1,50 @@
+{
+  "Navbar": {
+    "blog": "Blog",
+    "contacts": "Kontakte",
+    "faq": "FAQ",
+    "about_us": "Über uns",
+    "search": "Suche"
+  },
+  "Hero": {
+    "header": "Sei ein",
+    "header_bold": "Held",
+    "info": "Arbeite mit",
+    "info_bold": "Schweizer Beratung"
+  },
+  "Advantages": {
+    "firstCard": {
+      "header": "25% Rabatt",
+      "info": "Wenn Sie sich jetzt anmelden"
+    },
+    "secondCard": {
+      "header": "95% unserer Kunden",
+      "info": "Kommen zu uns zurück"
+    },
+    "thirdCard": {
+      "header": "Große Tech-Unternehmen wählen uns",
+      "info": "Google & Microsoft sind unsere Kunden"
+    }
+  },
+  "Form": {
+    "header": "Lass uns von dir hören",
+    "email": "E-Mail",
+    "name": "Dein Name",
+    "submit": "Absenden"
+  },
+  "Map": {
+    "header": "Wie Sie uns finden"
+  },
+  "Footer": {
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "phone": "Telefon",
+    "all_rights": "Alle Rechte vorbehalten"
+  },
+  "Popup": {
+    "welcome": "Willkommen auf unserer Website",
+    "info": "Wir verwenden Cookies",
+    "accept_all": "Alle Cookies akzeptieren",
+    "only_necessary": "Nur notwendige"
+  }
+}
