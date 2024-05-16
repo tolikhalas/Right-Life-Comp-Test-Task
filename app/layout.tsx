@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import CustomHeader from "@/components/Global/CustomHeader";
+import CustomFooter from "@/components/Global/CustomFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} min-h-screen flex-row justify-between`}
+      >
+        <div className="sticky top-0 z-10 w-full items-center font-mono text-sm ">
+          <div className="flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
+            <CustomHeader />
+          </div>
+        </div>
+        <div className="flex-1">{children}</div>
+        <div>
+          <CustomFooter />
+        </div>
+      </body>
     </html>
   );
 }
