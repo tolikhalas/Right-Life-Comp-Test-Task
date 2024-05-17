@@ -42,7 +42,7 @@ body {
 }
 
 .slide-left {
-  animation: slide infinite 10s linear;
+  animation: slide infinite 50s linear;
   transition: all 10s linear;
 }
 
